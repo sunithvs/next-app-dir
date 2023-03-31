@@ -2,11 +2,11 @@ import '#/styles/globals.css';
 
 export const metadata = {
     title: {
-        default: 'Next.js App Router',
+        default: 'Eventsradar',
         template: '%s | Next.js App Router',
     },
     description:
-        'A playground to explore new Next.js App Router features such as nested layouts, instant loading states, streaming, and component level data fetching.',
+        'A platform for finding and sharing events in your area.'
 };
 
 export default function RootLayout({

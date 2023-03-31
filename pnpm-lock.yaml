@@ -17,13 +17,14 @@ specifiers:
   dinero.js: 2.0.0-alpha.8
   eslint: 8.30.0
   eslint-config-next: 13.1.0
+  eslint-config-prettier: ^8.6.0
+  eslint-plugin-simple-import-sort: ^9.0.0
+  eslint-plugin-unused-imports: ^2.0.0
   husky: 8.0.3
   lint-staged: 13.1.0
   ms: 3.0.0-canary.1
   next: 13.2.2-canary.1
   postcss: 8.4.20
-  prettier: 2.8.1
-  prettier-plugin-tailwindcss: 0.2.1
   react: 18.2.0
   react-dom: 18.2.0
   styled-components: 6.0.0-beta.2
@@ -57,10 +58,11 @@ devDependencies:
   autoprefixer: 10.4.13_postcss@8.4.20
   eslint: 8.30.0
   eslint-config-next: 13.1.0_lzzuuodtsqwxnvqeq4g4likcqa
+  eslint-config-prettier: 8.8.0_eslint@8.30.0
+  eslint-plugin-simple-import-sort: 9.0.0_eslint@8.30.0
+  eslint-plugin-unused-imports: 2.0.0_eslint@8.30.0
   lint-staged: 13.1.0
   postcss: 8.4.20
-  prettier: 2.8.1
-  prettier-plugin-tailwindcss: 0.2.1_prettier@2.8.1
   tailwindcss: 3.2.4_postcss@8.4.20
   typescript: 4.9.4
 
@@ -2408,6 +2410,15 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-config-prettier/8.8.0_eslint@8.30.0:
+    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.30.0
+    dev: true
+
   /eslint-import-resolver-node/0.3.6:
     resolution: {integrity: sha512-0En0w03NRVMn9Uiyn8YRPDKvWjxCWkslUEhGNTdGx15RvPJYQ+lbOlqrlNI2vEAs4pDYK4f/HN2TbDmk5TP0iw==}
     dependencies:
@@ -2551,6 +2562,33 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.8
+    dev: true
+
+  /eslint-plugin-simple-import-sort/9.0.0_eslint@8.30.0:
+    resolution: {integrity: sha512-PtrLjyXP8kjRneWT1n0b99y/2Fyup37we7FVoWsI61/O7x4ztLohzhep/pxI/cYlECr/cQ2j6utckdvWpVwXNA==}
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 8.30.0
+    dev: true
+
+  /eslint-plugin-unused-imports/2.0.0_eslint@8.30.0:
+    resolution: {integrity: sha512-3APeS/tQlTrFa167ThtP0Zm0vctjr4M44HMpeg1P4bK6wItarumq0Ma82xorMKdFsWpphQBlRPzw/pxiVELX1A==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      eslint: ^8.0.0
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+    dependencies:
+      eslint: 8.30.0
+      eslint-rule-composer: 0.3.0
+    dev: true
+
+  /eslint-rule-composer/0.3.0:
+    resolution: {integrity: sha512-bt+Sh8CtDmn2OajxvNO+BX7Wn4CIWMpTRm3MaiKPCQcnnlm0CS2mhui6QaoeQugs+3Kj2ESKEEGJUdVafwhiCg==}
+    engines: {node: '>=4.0.0'}
     dev: true
 
   /eslint-scope/7.1.1:
@@ -3684,21 +3722,6 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
-    dev: true
-
-  /prettier-plugin-tailwindcss/0.2.1_prettier@2.8.1:
-    resolution: {integrity: sha512-aIO8IguumORyRsmT+E7JfJ3A9FEoyhqZR7Au7TBOege3VZkgMvHJMkufeYp4zjnDK2iq4ktkvGMNOQR9T8lisQ==}
-    engines: {node: '>=12.17.0'}
-    peerDependencies:
-      prettier: '>=2.2.0'
-    dependencies:
-      prettier: 2.8.1
-    dev: true
-
-  /prettier/2.8.1:
-    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
-    engines: {node: '>=10.13.0'}
-    hasBin: true
     dev: true
 
   /prop-types/15.8.1:
