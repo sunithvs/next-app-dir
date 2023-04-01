@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="[color-scheme:dark]">
-        <head/>
+        <head><title>Eventsradar</title></head>
         {children}
         </html>
     );
